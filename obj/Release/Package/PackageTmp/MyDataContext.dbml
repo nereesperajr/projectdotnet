@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DataSource" Class="MyDataContextDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=sql5031.site4now.net;Persist Security Info=True;User ID=DB_A1A56D_interment_admin" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="DataSourceConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ClientInfo" Member="ClientInfos">
+    <Type Name="ClientInfo">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="clientName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="cellNo" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="bday" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="address" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="regDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="is_deleted" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ContactMessages" Member="ContactMessages">
+    <Type Name="ContactMessage">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="phone" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="message" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="send_sms" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Users" Member="Users">
+    <Type Name="User">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userid" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="fullname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="contactno" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="is_active" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Interment" Member="Interments">
+    <Type Name="Interment">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="code" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="area" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="blk" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="lot" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="street" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="LAT" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="LONG" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Announcements" Member="Announcements">
+    <Type Name="Announcement">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="subject" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="msg" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Events" Member="Events">
+    <Type Name="Event">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="eName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="eDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="eDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="eVenue" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="eRemarks" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Inquiries" Member="Inquiries">
+    <Type Name="Inquiry">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="subject" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="msg" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="senderName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="contactno" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sendDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="is_deleted" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="sendMeMsg" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Deceased" Member="Deceaseds">
+    <Type Name="Deceased">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="client_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="location_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="created_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="dateOfDeath" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.getInterment" Method="getInterment">
+    <ElementType Name="getIntermentResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="code" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="area" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="blk" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="lot" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="street" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="LAT" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="LONG" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="DeathPerson" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="location_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="clientname" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>
